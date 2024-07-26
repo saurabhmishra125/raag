@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    height: 100%;
+}
+body {
+    
+    height: 100vh;
+   background-color: black;
+}
+
+.container {
+    display: flex;
+    width: 98vw;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.songList {
+    width: 30%;
+    height: 95%;
+    background-color: rgb(255 137 82);
+    margin: 5px;
+    border-radius: 18px;
+    border: 5px solid white;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.logo img{
+    width: 80px;
+    height: 83px;
+    margin-top: 5px;
+}
+.songName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    margin: 15px;
+}
+
+.songName img {
+    width: 60px;
+    height: 65px;
+    border-radius: 50%;
+}
+.songName p {
+    font-size:20px;
+    font-family: "Titillium Web", sans-serif;
+    
+
+}
+.songDescrip {
+    width: 64%;
+    height: 95%;
+    border-radius: 18px;
+    background-color: rgb(255 137 82);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+}
+@keyframes roll {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+#desImg {
+    width: 161px;
+    height: 164px;
+    border-radius: 50%;
+    margin: 15px 0;
+    animation: roll 2s linear 0;
+}
+
+.songDescrip p {
+    font-size: 35px;
+    font-family: "Merriweather", serif;
+    margin-bottom: 15px;
+   text-align: center;
+}
+
+.songDescrip input {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.songDescrip .icon {
+    font-size: 35px;
+}
+.point{
+    cursor: pointer;
+}
+.image{
+    width: 80px;
+    height: 83px;
+    margin-top: 5px 0 0 0;
+}
+@media  screen and (max-width:850px) {
+    .songList{
+        width: 50%;
+    }
+    .songDescrip{
+        width: 50%;
+    }
+    .songDescrip p{
+        font-size: 24px;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .container{
+        flex-direction: column;
+        align-items: normal;
+    }
+    .songList{
+        width: 100%;
+        height: 100%;
+    }
+    .songDescrip{
+        width: 100%;
+        height: 97%;   
+    }
+    .songName {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 330px;
+        margin: 10px 10px;
+    }
+    span {
+        text-align: center;
+    }
+}
