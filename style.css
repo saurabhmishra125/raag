@@ -118,16 +118,23 @@ body {
     margin-top: 5px 0 0 0;
 }
 @media  screen and (max-width:850px) {
-    .songList{
-        width: 50%;
-    }
+   .container{
+    flex-direction: column;
+   }
     .songDescrip{
-        width: 50%;
+        width: 100%;
     }
     .songDescrip p{
         font-size: 24px;
     }
-    
+    .songList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .songName{
+        margin: auto;
+    }
 }
 @media screen and (max-width:450px) {
     .container{
