@@ -9,6 +9,9 @@ let range=document.querySelector("input");
 let i=0;
 let prev=document.querySelector(".step-backward");
 let forward=document.querySelector(".step-forward");
+let sideButton=Array.from(document.querySelectorAll(".fa-chevron-right"));
+let desBlock=document.querySelector(".songDescrip");
+let listBlock=document.querySelector(".songList");
 let list=[
     {   sn:"Born-For-This",
         so:"song/Born-For-This.mp3",
@@ -34,9 +37,10 @@ let list=[
 range.value=0;
 playicon.forEach((e,index)=>{
     e.addEventListener('click', ()=>{
-       
+      
         if(e.classList[1] =='fa-circle-play'){
             end();
+            // buttonDisplay();
         song.src=`${list[index].so}`;
         song.play();
         e.classList.replace('fa-circle-play','fa-circle-pause');
@@ -46,6 +50,15 @@ playicon.forEach((e,index)=>{
          songname.innerHTML=list[index].sn;
          i=index
          image.style.animationIterationCount ="infinite";
+         if(window.matchMedia("(max-width:450px)").matches){
+            side();
+            sideButton[index].style.visibility="visible";
+            sideButton[index].addEventListener('click' , ()=>{
+                listBlock.style.display='none';
+                   desBlock.style.display='flex';
+            })
+         }
+         
         }
         else{ 
             
@@ -136,3 +149,12 @@ song.addEventListener('timeupdate',()=>{
 range.addEventListener('change',()=>{
     song.currentTime=parseInt(range.value*song.duration/100);
 })
+function side(){
+    sideButton.forEach((e)=>{
+        e.style.visibility='hidden';
+    })
+}
+function change(){
+    listBlock.style.display='flex';
+                   desBlock.style.display='none';
+}

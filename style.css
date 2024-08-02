@@ -64,6 +64,18 @@ body {
     
 
 }
+.fa-chevron-right{
+    margin-left: 10px;
+    color: white;
+    display: none;
+}
+button {
+    width: 100px;
+    height: 40px;
+    background: #f88e51;
+    border-radius: 10px;
+    display: none;
+}
 .songDescrip {
     width: 64%;
     height: 95%;
@@ -145,15 +157,23 @@ body {
         width: 100%;
         height: 100%;
     }
+    .fa-chevron-right{
+        display: inline;
+        visibility: hidden;
+    }
     .songDescrip{
         width: 100%;
-        height: 97%;   
+        height: 97%; 
+        display: none;  
+    }
+    button{
+        display: block;
     }
     .songName {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 330px;
+        width: 355px;
         margin: 10px 10px;
     }
     span {
